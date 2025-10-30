@@ -29,5 +29,14 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      # --- 이 부분을 추가하세요! ---
+    - name: Upload artifact for deployment
+      uses: actions/upload-artifact@v4
+      with:
+        # 이 이름으로 파일이 보관됩니다. (원하는 이름으로 변경 가능)
+        name: my-java-application
+        
+        # 'target/' 폴더 아래에 있는 .jar 파일을 찾아서 업로드합니다.
+        path: target/*.jar
 
    
