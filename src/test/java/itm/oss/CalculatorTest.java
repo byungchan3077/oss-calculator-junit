@@ -50,5 +50,10 @@ class CalculatorTest {
     void isOneNotPrime() {
         assertFalse(calc.isPrime(1), "1 is not prime.");
     }
+    @Test
+    @DisplayName("Testing function isPrime with 2")
+    void isTwoPrime() {
+        assertTrue(calc.isPrime(2), "2 is prime.");
+    }
 
 }
