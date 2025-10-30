@@ -45,5 +45,10 @@ class CalculatorTest {
         assertFalse(calc.isPrime(-4), "There are not negative primer numbers.");
         assertFalse(calc.isPrime(-5), "There are not negative primer numbers.");
     }
+    @Test
+    @DisplayName("Testing function isPrime with 1")
+    void isOneNotPrime() {
+        assertFalse(calc.isPrime(1), "1 is not prime.");
+    }
 
 }
